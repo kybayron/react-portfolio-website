@@ -8,6 +8,9 @@
   src: url('./assets/fonts/OpenSans-Regular.ttf');
 }
 
+p {
+  font-family: 'open-sans', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -55,11 +58,9 @@
 }
 
 .content-section {
-  display: flex;
-  justify-content: center;
   width: 80%;
   margin: auto;
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 .header-section { 
   margin-top: 10%;
@@ -93,7 +94,7 @@
 }
 
 .img-self-container {
-  width: 20%;
+  width: 15%;
   min-width: 200px;
 }
 .img-self {
@@ -101,6 +102,44 @@
   border-radius: 999px;
   border: 3px solid #F5F5F5;
   /* align-self: center; */
+}
+
+.section-title h2 {
+  color: #F5F5F5;
+  font-family: 'futura-bold', sans-serif;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px #000;
+  border-bottom: 6px solid #F5F5F5;
+}
+
+.socials-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10%;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+button.card.clickable {
+  height: 100%;
+  padding: 15px;
+}
+
+.clickable-image {
+  width: 8vw;
+  height: auto;
+}
+
+.clickable-label {
+  font-size: 1.5em;
+  font-family: 'futura-bold', sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #0c2340;
 }
 
 @media only screen and (max-width: 767px) {
@@ -114,5 +153,14 @@
   
   .intro-body {
     font-size: 1em;
+  }
+
+  button.card.clickable {
+    padding: 8px;
+  }
+
+  .clickable-image {
+    width: 20vw;
+    height: auto;
   }
 }
