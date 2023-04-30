@@ -124,9 +124,18 @@ p {
   cursor: pointer;
 }
 
+button {
+  transition: all 0.3s ease-out;
+}
+
 button.card.clickable {
   height: 100%;
   padding: 15px;
+}
+
+button:hover {
+  transform: translate(5px, -5px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .clickable-image {
