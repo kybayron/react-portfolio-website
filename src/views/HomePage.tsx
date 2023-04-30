@@ -3,8 +3,11 @@ import React from 'react';
 import HeaderSection from '../components/HeaderSection';
 import ContentSection from '../components/ContentSection';
 import FooterSection from '../components/FooterSection';
-import Card from '../components/Card';
 import image from '../assets/self_photo.jpg'
+import SectionTitle from '../components/SectionTitle';
+import ClickableCard from '../components/ClickableCard';
+import linkedinLogo from '../assets/linkedin_logo.png'
+import githubLogo from '../assets/github_logo.png'
 
 export default function HomePage() {
     return (
@@ -21,11 +24,11 @@ export default function HomePage() {
                 </div>
             </HeaderSection>
             <ContentSection>
-                <Card>
-                    <div className='intro-text-container'>
-                        <p>Hi I&apos;m Karl</p>
-                    </div>
-                </Card>
+                <SectionTitle text='Socials'/>
+                <div className='socials-container'>
+                    <ClickableCard imageSrc={linkedinLogo} url="https://www.linkedin.com/in/karl-edward-bayron/" label="LinkedIn"/>
+                    <ClickableCard imageSrc={githubLogo} url="https://github.com/kybayron" label="GitHub"/>
+                </div>
             </ContentSection>
             <FooterSection/>
         </>
