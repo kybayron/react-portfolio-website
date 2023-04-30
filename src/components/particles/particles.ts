@@ -4,7 +4,7 @@ const options:ISourceOptions = {
     "autoPlay": true,
     "background": {
       "color": {
-        "value": "#000000"
+        "value": "#333333"
       },
       "image": "",
       "position": "50% 50%",
