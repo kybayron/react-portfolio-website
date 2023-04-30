@@ -11,6 +11,12 @@
 p {
   font-family: 'open-sans', sans-serif;
 }
+
+h1 {
+  font-family: 'futura-bold', sans-serif;
+  color: #F5F5F5;
+}
+
 .App {
   text-align: center;
 }
@@ -101,7 +107,6 @@ p {
   max-width: 100%;
   border-radius: 999px;
   border: 3px solid #F5F5F5;
-  /* align-self: center; */
 }
 
 .section-title h2 {
@@ -150,6 +155,33 @@ button:hover {
   margin-top: 0;
   color: #0c2340;
 }
+.services-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.labeled-card {
+  width: 8%;
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  margin-bottom: 3%;
+}
+.card-image {
+  height: 5vh;
+  width: auto;
+}
+
+.card-label {
+  font-family: 'futura-bold', sans-serif;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 @media only screen and (max-width: 767px) {
   .intro-text-container {
@@ -171,5 +203,20 @@ button:hover {
   .clickable-image {
     width: 20vw;
     height: auto;
+  }
+
+  .card-image {
+    height: 5vh;
+    width: auto;
+  }
+
+  .labeled-card {
+    width: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .card-label {
+    font-size: 0.7em;
   }
 }
