@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'futura-bold';
+  src: url('./assets/fonts/Futura\ Bold\ font.ttf');
+}
+
+@font-face {
+  font-family: 'open-sans';
+  src: url('./assets/fonts/OpenSans-Regular.ttf');
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +44,75 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.content-section {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+}
+.header-section { 
+  margin-top: 10%;
+}
+.intro-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap:wrap;
+  column-gap: 5%;
+}
+
+.intro-text-container {
+  width: 60%;
+}
+
+.intro-title {
+  color: #F5F5F5;
+  font-family: 'futura-bold', sans-serif;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.intro-body {
+  color: #F5F5F5;
+  font-family: 'open-sans', sans-serif;
+  font-size: 1.5em;
+  text-shadow: 4px 4px 8px #000;
+}
+
+.img-self-container {
+  width: 20%;
+  min-width: 200px;
+}
+.img-self {
+  max-width: 100%;
+  border-radius: 999px;
+  border: 3px solid #F5F5F5;
+  /* align-self: center; */
+}
+
+@media only screen and (max-width: 767px) {
+  .intro-text-container {
+    width: 70%;
+  }
+
+  .intro-title {
+    font-size: 2em;
+  }
+  
+  .intro-body {
+    font-size: 1em;
   }
 }
