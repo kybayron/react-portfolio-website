@@ -18,6 +18,12 @@ import stepFunctionsLogo from '../assets/step_functions_logo.svg'
 import wafLogo from '../assets/waf_logo.png'
 import dynamoDbLogo from '../assets/dynamo_logo.png'
 import githubLogo from '../assets/github_logo.png'
+import kotlinLogo from '../assets/kotlin_logo.png'
+import nodeJsLogo from '../assets/nodejs_logo.png'
+import reactLogo from '../assets/react_logo.png'
+import typescriptLogo from '../assets/typescript_logo.png'
+import androidLogo from '../assets/android_logo.png'
+import terraformLogo from '../assets/terraform_logo.png'
 import LabeledCard from '../components/LabeledCard';
 
 export default function HomePage() {
@@ -31,6 +37,7 @@ export default function HomePage() {
                     <div className='intro-text-container'>
                         <h1 className='intro-title'> Hi I&apos;m Karl!</h1>
                         <p className='intro-body'>As a software engineer, I am passionate about writing clean, readable, and testable code. With extensive experience in NodeJS, Typescript, React, Redux, and AWS Services, I am well-equipped to tackle even the most complex software development projects.</p>
+                        <p className='intro-body'>Currently a Software Engineer at <a href='https://www.maya.ph/'>Maya Philippines, Inc.</a></p>
                     </div>
                 </div>
             </HeaderSection>
@@ -41,6 +48,15 @@ export default function HomePage() {
                 </div>
                 <SectionTitle text='Tech Stack'/>
                 <div className='tech-stack-container'>
+                    <h1>Programming Languages, Frameworks & Tools</h1>
+                    <div className='services-container'>
+                        <LabeledCard imageSrc={typescriptLogo} label='TypeScript'/>
+                        <LabeledCard imageSrc={nodeJsLogo} label='NodeJS'/>
+                        <LabeledCard imageSrc={reactLogo} label='ReactJS'/>
+                        <LabeledCard imageSrc={kotlinLogo} label='Kotlin'/>
+                        <LabeledCard imageSrc={androidLogo} label='Android'/>
+                        <LabeledCard imageSrc={terraformLogo} label='Terraform'/>
+                    </div>
                     <h1>AWS Services</h1>
                     <div className='services-container'>
                         <LabeledCard imageSrc={lambdaLogo} label='Lambda'/>
@@ -53,7 +69,6 @@ export default function HomePage() {
                         <LabeledCard imageSrc={cloudWatchLogo} label='CloudWatch'/>
                         <LabeledCard imageSrc={stepFunctionsLogo} label='Step Functions'/>
                         <LabeledCard imageSrc={wafLogo} label='AWS WAF'/>
-
                     </div>
                 </div>
                 <SectionTitle text='Socials'/>

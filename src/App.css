@@ -8,6 +8,12 @@
   src: url('./assets/fonts/OpenSans-Regular.ttf');
 }
 
+a {
+  font-family: 'futura-bold', sans-serif;
+  color: #41e033b6;
+  font-size: 1.25em;
+}
+
 p {
   font-family: 'open-sans', sans-serif;
 }
@@ -71,6 +77,10 @@ h1 {
 }
 .header-section { 
   margin-top: 10%;
+}
+
+.footer-section {
+  margin-bottom: 2%;
 }
 .intro-container {
   display: flex;
