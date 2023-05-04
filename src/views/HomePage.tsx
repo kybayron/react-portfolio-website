@@ -46,11 +46,13 @@ export default function HomePage() {
             <ContentSection>
                 <SectionTitle text='Projects'/>
                 <div>
-                    <h1>This Portfolio Website!</h1>
+                    {/* <h1>This Portfolio Website!</h1> */}
                     <Card>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <h1 className='project-title'>This Portfolio Website!</h1>
+                        <p>This portfolio website you are on right now is created using <b>Typescript</b> and <b>React</b> and is hosted on Amazon Web Service <b>S3</b> which is then distributed by AWS&apos;s Content Delivery Network Service called <b>Cloudfront</b>. The setup for the domain and SSL certificate of this website was done through AWS <b>Route 53</b>. </p>
+                        <p>The main goal of this website is to provide an easy overview on my profile as a Software Developer as well as easy access to my deployed projects and their respective code which are hosted in my personal Github account.</p>
                         <div className='buttons-container'>
-                            <button type='button' className='button blue'>View Code</button>
+                            <a href='https://github.com/kybayron/react-portfolio-website' className='button blue'>View Code</a>
                             <button type='button' className='button green'>View Demo</button>
                         </div>
                     </Card>
