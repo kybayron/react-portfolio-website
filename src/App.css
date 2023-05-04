@@ -64,7 +64,7 @@ h1 {
 }
 
 .card {
-  background-color: #fff;
+  background-color: #F5F5F5;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -140,16 +140,14 @@ h1 {
   cursor: pointer;
 }
 
-button {
-  transition: all 0.3s ease-out;
-}
-
 button.card.clickable {
   height: 100%;
   padding: 15px;
+  transition: all 0.3s ease-out;
+
 }
 
-button:hover {
+button.card.clickable:hover {
   transform: translate(5px, -5px);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -195,6 +193,31 @@ button:hover {
   color: #0c2340;
 }
 
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  column-gap: 3%;
+}
+
+.button {
+  font-family: 'open-sans', sans-serif;
+  border-radius: 5px;
+  color:#F5F5F5;
+  font-size: 1.3em;
+  text-shadow: -1px -1px 0 #000,  
+               1px -1px 0 #000, 
+              -1px 1px 0 #000, 
+               1px 1px 0 #000;
+}
+
+.button.green {
+  background-color: rgb(107, 27, 80);
+}
+
+.button.blue {
+  background-color: rgba(99, 99, 141, 0.74);
+}
 @media only screen and (max-width: 767px) {
   .intro-text-container {
     width: 70%;
@@ -230,5 +253,15 @@ button:hover {
 
   .card-label {
     font-size: 0.7em;
+  }
+  .buttons-container {
+    justify-content: center;
+  }
+  .button {
+    font-size: 1em;
+  }
+
+  .card p {
+    font-size: .8em;
   }
 }

@@ -24,7 +24,9 @@ import reactLogo from '../assets/react_logo.png'
 import typescriptLogo from '../assets/typescript_logo.png'
 import androidLogo from '../assets/android_logo.png'
 import terraformLogo from '../assets/terraform_logo.png'
+import route53Logo from '../assets/route_53_logo.png'
 import LabeledCard from '../components/LabeledCard';
+import Card from '../components/Card';
 
 export default function HomePage() {
     return (
@@ -44,7 +46,15 @@ export default function HomePage() {
             <ContentSection>
                 <SectionTitle text='Projects'/>
                 <div>
-                    <h1>Coming Soon!</h1>
+                    <h1>This Portfolio Website!</h1>
+                    <Card>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <div className='buttons-container'>
+                            <button type='button' className='button blue'>View Code</button>
+                            <button type='button' className='button green'>View Demo</button>
+                        </div>
+                    </Card>
+                    <h1>More Coming Soon!</h1>
                 </div>
                 <SectionTitle text='Tech Stack'/>
                 <div className='tech-stack-container'>
@@ -64,6 +74,7 @@ export default function HomePage() {
                         <LabeledCard imageSrc={s3Logo} label='S3'/>
                         <LabeledCard imageSrc={dynamoDbLogo} label='DynamoDB'/>
                         <LabeledCard imageSrc={cloudFrontLogo} label='CloudFront'/>
+                        <LabeledCard imageSrc={route53Logo} label='Route 53' />
                         <LabeledCard imageSrc={snsLogo} label='SNS'/>
                         <LabeledCard imageSrc={sqsLogo} label='SQS'/>
                         <LabeledCard imageSrc={cloudWatchLogo} label='CloudWatch'/>

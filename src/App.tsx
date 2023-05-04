@@ -8,8 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path='/particles' element={<><HomePage/><ParticlesComponent/></>} />
+        <Route path='/' element={<><HomePage/><ParticlesComponent/></>}/>
       </Routes>
     </Router>
   );
