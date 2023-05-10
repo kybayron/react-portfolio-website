@@ -30,7 +30,7 @@ const options:ISourceOptions = {
     },
     "detectRetina": true,
     "duration": 0,
-    "fpsLimit": 120,
+    "fpsLimit": 30,
     "interactivity": {
       "detectsOn": "window",
       "events": {
