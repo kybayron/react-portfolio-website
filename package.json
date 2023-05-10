@@ -22,11 +22,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=$(grep PUBLIC_URL .env | cut -d '=' -f2) && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint \"**/*.{ts,tsx}\"",
-    "lint-fix": "eslint \"**/*.{ts,tsx}\" --fix"
+    "lint-fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "deploy": "BUCKET=$(grep S3_BUCKET .env | cut -d '=' -f2) && aws s3 cp ./build ${BUCKET} --recursive"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "eslint": "^8.39.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
