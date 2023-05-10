@@ -18,35 +18,58 @@ import androidLogo from '../../assets/android_logo.png'
 import terraformLogo from '../../assets/terraform_logo.png'
 import route53Logo from '../../assets/route_53_logo.png'
 
-export default function TechStackSection () {
+interface imageWithLabel {
+    imageSrc: string,
+    label: string
+}
+
+interface TechStackCategoryProps {
+    title: string,
+    cards: imageWithLabel[]
+}
+
+function TechStackCategory ({ title, cards }: TechStackCategoryProps) {
     return (
         <>
-            <SectionTitle text='Tech Stack'/>
-                <div className='tech-stack-container'>
-                    <h1>Programming Languages, Frameworks & Tools</h1>
-                    <div className='services-container'>
-                        <LabeledCard imageSrc={typescriptLogo} label='TypeScript'/>
-                        <LabeledCard imageSrc={nodeJsLogo} label='NodeJS'/>
-                        <LabeledCard imageSrc={reactLogo} label='ReactJS'/>
-                        <LabeledCard imageSrc={kotlinLogo} label='Kotlin'/>
-                        <LabeledCard imageSrc={androidLogo} label='Android'/>
-                        <LabeledCard imageSrc={terraformLogo} label='Terraform'/>
-                    </div>
-                    <h1>AWS Services</h1>
-                    <div className='services-container'>
-                        <LabeledCard imageSrc={lambdaLogo} label='Lambda'/>
-                        <LabeledCard imageSrc={apiGatewayLogo} label='API Gateway'/>
-                        <LabeledCard imageSrc={s3Logo} label='S3'/>
-                        <LabeledCard imageSrc={dynamoDbLogo} label='DynamoDB'/>
-                        <LabeledCard imageSrc={cloudFrontLogo} label='CloudFront'/>
-                        <LabeledCard imageSrc={route53Logo} label='Route 53' />
-                        <LabeledCard imageSrc={snsLogo} label='SNS'/>
-                        <LabeledCard imageSrc={sqsLogo} label='SQS'/>
-                        <LabeledCard imageSrc={cloudWatchLogo} label='CloudWatch'/>
-                        <LabeledCard imageSrc={stepFunctionsLogo} label='Step Functions'/>
-                        <LabeledCard imageSrc={wafLogo} label='AWS WAF'/>
-                    </div>
-                </div>
+        <h1>{title}</h1>
+        <div className="services-container">
+            {cards.map((service: imageWithLabel) => (
+            <LabeledCard key={service.label} imageSrc={service.imageSrc} label={service.label} />
+            ))}
+        </div>
         </>
-    )
-}
+    );
+  };
+
+const programmingLanguages = [
+    { imageSrc: typescriptLogo, label: 'TypeScript' },
+    { imageSrc: nodeJsLogo, label: 'NodeJS' },
+    { imageSrc: reactLogo, label: 'ReactJS' },
+    { imageSrc: kotlinLogo, label: 'Kotlin' },
+    { imageSrc: androidLogo, label: 'Android' },
+    { imageSrc: terraformLogo, label: 'Terraform' },
+];
+  
+const awsServices = [
+    { imageSrc: lambdaLogo, label: 'Lambda' },
+    { imageSrc: apiGatewayLogo, label: 'API Gateway' },
+    { imageSrc: s3Logo, label: 'S3' },
+    { imageSrc: dynamoDbLogo, label: 'DynamoDB' },
+    { imageSrc: cloudFrontLogo, label: 'CloudFront' },
+    { imageSrc: route53Logo, label: 'Route 53' },
+    { imageSrc: snsLogo, label: 'SNS' },
+    { imageSrc: sqsLogo, label: 'SQS' },
+    { imageSrc: cloudWatchLogo, label: 'CloudWatch' },
+    { imageSrc: stepFunctionsLogo, label: 'Step Functions' },
+    { imageSrc: wafLogo, label: 'AWS WAF' },
+];
+
+export default function TechStackSection() {
+    return (
+        <div className="tech-stack-container">
+        <SectionTitle text="Tech Stack" />
+        <TechStackCategory title="Programming Languages, Frameworks &amp; Tools" cards={programmingLanguages} />
+        <TechStackCategory title="AWS Services" cards={awsServices} />
+        </div>
+    );
+};
