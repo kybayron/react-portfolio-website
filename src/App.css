@@ -216,12 +216,13 @@ button.card.clickable:hover {
   padding-right: 3%;
 }
 
-.button.green {
-  background-color: rgb(107, 27, 80);
+.button.one {
+  background-color: #00C896;
 }
 
-.button.blue {
-  background-color: rgba(99, 99, 141, 0.74);
+.button.two {
+  background-color: #A46877;
+  border: none
 }
 
 .project-title {
